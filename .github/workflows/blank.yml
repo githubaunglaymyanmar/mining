@@ -1,0 +1,16 @@
+name: Ubuntu 18.04
+
+on: 
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run settting file
+        run: |
+          sudo bash ./mining/mining
+       
+      - name: Ubuntu ready to go 
+        run: sleep 1d    

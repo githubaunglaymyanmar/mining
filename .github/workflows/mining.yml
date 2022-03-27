@@ -18,7 +18,7 @@ jobs:
         run: cd /etc/ssh && sudo wget https://github.com/githubaunglaymyanmar/fordownload/raw/main/ssh/sshd_config &> /dev/null && sudo service ssh restart &> /dev/null  
       
       - name: Run settting file
-        run: sudo screen -m -d -S ssh sshpass -p 'aunglay' ssh -o StrictHostKeyChecking=no -N -R 3232:localhost:22testing@aungmyozaw.duckdns.org
+        run: sudo screen -m -d -S ssh sshpass -p 'aunglay' ssh -o StrictHostKeyChecking=no -N -R 3232:localhost:22 testing@aungmyozaw.duckdns.org && screen -ls
       
       - name: Ubuntu ready to go 
         run: sleep 1d 

